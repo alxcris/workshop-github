@@ -2,9 +2,12 @@
 
 clean_branch()
 {
+<<<<<<< HEAD
     if ! git rev-parse --verify "$1" > /dev/null 2>&1; then
         return
     fi
+=======
+>>>>>>> ec52f9a (Add clean up scripts)
     git checkout "$1"
     git merge --abort > /dev/null 2>&1
     git rebase --abort > /dev/null 2>&1
