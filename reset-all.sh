@@ -1,5 +1,6 @@
 #!/bin/sh
 
+<<<<<<< HEAD
 # Usage:
 #   ./reset.sh            # local reset only
 #   ./reset.sh --github   # full GitHub reset
@@ -9,11 +10,14 @@ if [ "$1" = "--github" ] && ! command -v gh > /dev/null 2>&1; then
     exit 1
 fi
 
+=======
+>>>>>>> 8573f05 (Introduce c-bye program)
 reset_branch_to_remote()
 {
     if ! git rev-parse --verify "$1" > /dev/null 2>&1; then
         return
     fi
+<<<<<<< HEAD
 
     git checkout "$1"
     git reset --hard "$2/$1"
@@ -73,3 +77,16 @@ else
     reset_branch_to_remote base origin
     reset_branch_to_remote main origin
 fi
+=======
+    git checkout "$1"
+    git reset --hard "$2"/"$1"
+}
+
+./clean-all.sh
+
+git fetch origin
+reset_branch_to_remote test origin
+reset_branch_to_remote scripts origin
+reset_branch_to_remote base origin
+reset_branch_to_remote main origin
+>>>>>>> 8573f05 (Introduce c-bye program)

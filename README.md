@@ -1,3 +1,4 @@
+Git lab made in teams with Antonio-88
 # Git Advanced & GitHub Workshop
 
 This is a practical workshop consisting of common Git Advanced & GitHub-related actions.
